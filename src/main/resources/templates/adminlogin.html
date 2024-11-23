@@ -1,0 +1,106 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div th:if="${param.error}">-->
+<!--    <h2 style="color:red;">Invalid credentials</h2>-->
+<!--</div>-->
+<!--<div th:if="${logout}" >-->
+<!--    <h2 style="color:green;">YOU HAVE BEEN SUCCESSFULLY LOGOUT</h2>-->
+<!--</div>-->
+<!--    <form action="/login" method="post">-->
+<!--        <input name="username" type="text" placeholder="Enter username"></br>-->
+<!--        <input name="password" type="password" placeholder="Enter password"></br>-->
+<!--        <button>login</button>-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        form input:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #0056b3;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h2[style="color:red;"] {
+            color: #ff4d4d;
+        }
+
+        h2[style="color:green;"] {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+<div th:if="${param.error}">
+    <h2 style="color:red;">Invalid credentials</h2>
+</div>
+
+<form action="/login" method="post">
+    <input name="username" type="text" placeholder="Enter username">
+    <input name="password" type="password" placeholder="Enter password">
+    <button>Login</button>
+
+    
+</form>
+</body>
+</html>

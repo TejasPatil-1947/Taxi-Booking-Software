@@ -1,0 +1,99 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h2 th:text="${message}"></h2>-->
+<!--<h1>Welcome To Admin Panel</h1>-->
+
+<!--    <a href="readAllContacts">Read All Contacts</a><br>-->
+<!--    <a href="readAllBookings">Read All Bookings</a><br>-->
+<!--    <a href="addService">Add Service</a><br>-->
+<!--    <a href="changeCredentials">Change Credentials</a><br>-->
+<!--    <a href="/dologout">LOGOUT</a>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+            margin-top: 30px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 18px;
+            color: #ff5722;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+
+        a:active {
+            background-color: #004085;
+        }
+
+        .logout-button {
+            background-color: #d9534f;
+        }
+
+        .logout-button:hover {
+            background-color: #c9302c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 th:text="${message}"></h2>
+    <h1>Welcome To Admin Panel</h1>
+
+    <a href="readAllContacts">Read All Contacts</a>
+    <a href="readAllBookings">Read All Bookings</a>
+    <a href="addService">Add Service</a>
+    <a href="changeCredentials">Change Credentials</a>
+    <a href="/dologout" class="logout-button">LOGOUT</a>
+
+
+</div>
+</body>
+</html>

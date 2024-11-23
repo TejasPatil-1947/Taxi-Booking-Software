@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Booking Details</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+  }
+
+  h2 {
+    color: #333;
+    text-align: center;
+  }
+
+  table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #ddd;
+  }
+
+  td {
+    color: #333;
+  }
+</style>
+</head>
+<body>
+<h2>Booking Details</h2>
+<a href="dashboard">Admin Home</a><br><br>
+<h2 th:text="${message}"></h2>
+<table>
+  <thead>
+  <tr  >
+    <th>Id</th>
+    <th>Name</th>
+    <th>Source</th>
+    <th>Email</th>
+    <th>Destination</th>
+    <th>Time</th>
+    <th>Date</th>
+    <th>Comfort</th>
+    <th>Adult</th>
+    <th>Children</th>
+    <th>Message</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each=" booking   : ${allBookings}">
+    <td th:text="${booking.id}"></td>
+    <td th:text="${booking.name}"></td>
+    <td th:text="${booking.source}">John Deo</td>
+    <td th:text="${booking.email}"></td>
+    <td th:text="${booking.destination}"></td>
+    <td th:text="${booking.time}"></td>
+    <td th:text="${booking.date}"></td>
+    <td th:text="${booking.comfort}"></td>
+    <td th:text="${booking.adult}"></td>
+    <td th:text="${booking.children}"></td>
+    <td th:text="${booking.message}"></td>
+    <td> <a  th:href="@{/admin/deleteBooking/{id} (id=${booking.id})}">DELETE</a></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
